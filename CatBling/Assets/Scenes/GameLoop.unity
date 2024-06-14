@@ -390,7 +390,7 @@ GameObject:
   - component: {fileID: 1488178079}
   - component: {fileID: 1488178083}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: GUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -504,7 +504,7 @@ GameObject:
   - component: {fileID: 1891096316}
   - component: {fileID: 1891096315}
   m_Layer: 5
-  m_Name: Contador
+  m_Name: ContadorDinero
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
