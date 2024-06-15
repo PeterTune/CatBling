@@ -4,7 +4,7 @@ using TMPro;
 public class CounterTMPro : MonoBehaviour
 {
     public TMP_Text counterText; // Referencia al componente de texto TextMesh Pro en la UI
-    private int counter = 0; // Variable para llevar el conteo
+    private int counter = 1000; // Variable para llevar el conteo
 
     void Start()
     {
@@ -27,6 +27,6 @@ public class CounterTMPro : MonoBehaviour
     void UpdateCounterText()
     {
         // Actualiza el texto del componente de UI con el valor actual del contador
-        counterText.text = counter.ToString();
+        counterText.text = "$"+counter.ToString();
     }
 }
