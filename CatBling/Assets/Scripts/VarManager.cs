@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using TMPro;
 
 public class VarManager : MonoBehaviour
 {
@@ -16,6 +17,19 @@ public class VarManager : MonoBehaviour
     public bool haveFelicidad = true;
     public bool haveFamilia = true;
     public bool haveTrabajo = true;
+    
+    //Variables para mover jugador a referencias
+    public GameObject Gato;
+    public GameObject referenciaCasa;
+    public GameObject referenciaTrabajo;
+    public GameObject referenciaCasino;
+    public GameObject referenciaTienda;
+
+    //Variables
+    public TMP_Text TMPfelicidad;
+    public TMP_Text TMPtrabajo;
+    public TMP_Text TMPfamilia;
+    public TMP_Text TMPinero;
 
     // 0 = trabajo; 1 = casino; 2 = familia; 3 = tienda; 4 = menú;
     public int ubicacion = 0; 
@@ -23,13 +37,20 @@ public class VarManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        felicidad = 100;
+        trabajo = 100;
+        familia = 100;
+        dinero = 1000;
+        edad = 30;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        TMPfelicidad.SetText("Felicidad: " + felicidad.ToString());
+        TMPtrabajo.SetText("Trabajo: " + trabajo.ToString());
+        TMPfamilia.SetText("Familia: " + familia.ToString());
+        TMPinero.SetText("Dinero: $" + dinero.ToString());
     }
 
     public void restarEdad(int valor)
@@ -112,5 +133,47 @@ public class VarManager : MonoBehaviour
         {
             trabajo = 100;
         }
+    }
+
+
+    //Funciones al apretar botones
+    public void IrCasa()
+    {
+        ubicacion = 2;
+        Vector2 nuevaPosicion = referenciaCasa.transform.position;
+        transform.position = nuevaPosicion;
+        //funciones a realizar:
+        sumarDinero(10);
+        sumarFelicidad(10);
+    }
+    public void IrTrabajo()
+    {
+        ubicacion = 0;
+        Vector2 nuevaPosicion = referenciaTrabajo.transform.position;
+        transform.position = nuevaPosicion;
+        //funciones a realizar:
+        sumarDinero(10);
+        sumarTrabajo(10);
+    }
+    public void IrCasino()
+    {
+        ubicacion = 1;
+        Vector2 nuevaPosicion = referenciaCasino.transform.position;
+        transform.position = nuevaPosicion;
+        //funciones a realizar:
+        sumarDinero(10);
+        restarFamilia(10);
+    }
+    public void IrTienda()
+    {
+        ubicacion = 3;
+        Vector2 nuevaPosicion = referenciaTienda.transform.position;
+        transform.position = nuevaPosicion;
+        //funciones a realizar:
+        sumarDinero(10);
+    }
+    public void IrMenu()
+    {
+        ubicacion = 4;
     }
 }
