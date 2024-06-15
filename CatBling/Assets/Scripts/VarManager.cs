@@ -170,7 +170,6 @@ public class VarManager : MonoBehaviour
         restarFamilia(10);
         sumarFelicidad(10);
         restarTrabajo(10);
-        Invoke("IrMenu", 5.0f);
     }
     public void IrTienda()
     {
