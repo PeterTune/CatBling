@@ -139,7 +139,7 @@ public class VarManager : MonoBehaviour
     //Funciones al apretar botones
     public void IrCasa()
     {
-        ubicacion = 2;
+        ubicacion = 3;
         Vector2 nuevaPosicion = referenciaCasa.transform.position;
         transform.position = nuevaPosicion;
         //funciones a realizar:
@@ -148,7 +148,7 @@ public class VarManager : MonoBehaviour
     }
     public void IrTrabajo()
     {
-        ubicacion = 0;
+        ubicacion = 1;
         Vector2 nuevaPosicion = referenciaTrabajo.transform.position;
         transform.position = nuevaPosicion;
         //funciones a realizar:
@@ -157,7 +157,7 @@ public class VarManager : MonoBehaviour
     }
     public void IrCasino()
     {
-        ubicacion = 1;
+        ubicacion = 2;
         Vector2 nuevaPosicion = referenciaCasino.transform.position;
         transform.position = nuevaPosicion;
         //funciones a realizar:
@@ -166,7 +166,7 @@ public class VarManager : MonoBehaviour
     }
     public void IrTienda()
     {
-        ubicacion = 3;
+        ubicacion = 4;
         Vector2 nuevaPosicion = referenciaTienda.transform.position;
         transform.position = nuevaPosicion;
         //funciones a realizar:
@@ -174,6 +174,6 @@ public class VarManager : MonoBehaviour
     }
     public void IrMenu()
     {
-        ubicacion = 4;
+        ubicacion = 0;
     }
 }
