@@ -18,6 +18,8 @@ public class GamblingManager : MonoBehaviour
     public int EspacioN = 0;
     public TextMeshProUGUI TextEspacioN;
 
+    public VarManager Gato;
+
     private int TotalGanadoRonda = 0;
 
     public bool Gambleando = false;
@@ -68,7 +70,8 @@ public class GamblingManager : MonoBehaviour
 
     public void Gambling()
     {
-        StartCoroutine(RotateForSeconds(rotationDuration));
+        if(Gambleando == false)
+            StartCoroutine(RotateForSeconds(rotationDuration));
     }
 
     IEnumerator RotateForSeconds(float duration)
@@ -118,7 +121,7 @@ public class GamblingManager : MonoBehaviour
                 TotalGanadoRonda = Espacio1 * 4 + EspacioN * 2;
                 break;
 
-            case 135f:
+            case 315f:
                 TotalGanadoRonda = Espacio2 * 4 + EspacioR * 2;
                 break;
 
@@ -126,7 +129,7 @@ public class GamblingManager : MonoBehaviour
                 TotalGanadoRonda = Espacio3 * 4 + EspacioN * 2;
                 break;
 
-            case 315f:
+            case 135f:
                 TotalGanadoRonda = Espacio4 * 4 + EspacioR * 2;
                 break;
         }
@@ -148,7 +151,7 @@ public class GamblingManager : MonoBehaviour
 
     void SumarATotal() 
     {
-        print(TotalGanadoRonda);
+        Gato.dinero += TotalGanadoRonda;
     }
 }
 
