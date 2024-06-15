@@ -5,6 +5,7 @@ public class CounterTMPro : MonoBehaviour
 {
     public TMP_Text counterText; // Referencia al componente de texto TextMesh Pro en la UI
     private int counter = 1000; // Variable para llevar el conteo
+    public VarManager Gato;
 
     void Start()
     {
@@ -15,7 +16,7 @@ public class CounterTMPro : MonoBehaviour
     void Update()
     {
         // Verifica si se presiona cualquier tecla
-        if (Input.anyKeyDown)
+        if (Input.anyKeyDown && Gato.ubicacion == 1)
         {
             // Incrementa el contador
             counter++;
@@ -27,6 +28,6 @@ public class CounterTMPro : MonoBehaviour
     void UpdateCounterText()
     {
         // Actualiza el texto del componente de UI con el valor actual del contador
-        counterText.text = "$"+counter.ToString();
+        Gato.dinero = counter;
     }
 }
