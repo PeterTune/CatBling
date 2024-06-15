@@ -1115,6 +1115,7 @@ MonoBehaviour:
   referenciaTrabajo: {fileID: 207979628}
   referenciaCasino: {fileID: 207979628}
   referenciaTienda: {fileID: 207979628}
+  Botones: {fileID: 1984413276}
   TMPfelicidad: {fileID: 55791553}
   TMPtrabajo: {fileID: 1818638752}
   TMPfamilia: {fileID: 1051677437}

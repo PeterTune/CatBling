@@ -24,6 +24,7 @@ public class VarManager : MonoBehaviour
     public GameObject referenciaTrabajo;
     public GameObject referenciaCasino;
     public GameObject referenciaTienda;
+    public GameObject Botones;
 
     //Variables
     public TMP_Text TMPfelicidad;
@@ -143,8 +144,9 @@ public class VarManager : MonoBehaviour
         Vector2 nuevaPosicion = referenciaCasa.transform.position;
         transform.position = nuevaPosicion;
         //funciones a realizar:
-        sumarDinero(10);
-        sumarFelicidad(10);
+        sumarFamilia(10);
+        restarFelicidad(10);
+        Invoke("IrMenu", 5.0f);
     }
     public void IrTrabajo()
     {
@@ -152,8 +154,9 @@ public class VarManager : MonoBehaviour
         Vector2 nuevaPosicion = referenciaTrabajo.transform.position;
         transform.position = nuevaPosicion;
         //funciones a realizar:
-        sumarDinero(10);
+        restarFelicidad(5);
         sumarTrabajo(10);
+        Invoke("IrMenu", 5.0f);
     }
     public void IrCasino()
     {
@@ -161,8 +164,10 @@ public class VarManager : MonoBehaviour
         Vector2 nuevaPosicion = referenciaCasino.transform.position;
         transform.position = nuevaPosicion;
         //funciones a realizar:
-        sumarDinero(10);
         restarFamilia(10);
+        sumarFelicidad(10);
+        restarTrabajo(10);
+        Invoke("IrMenu", 5.0f);
     }
     public void IrTienda()
     {
@@ -170,10 +175,11 @@ public class VarManager : MonoBehaviour
         Vector2 nuevaPosicion = referenciaTienda.transform.position;
         transform.position = nuevaPosicion;
         //funciones a realizar:
-        sumarDinero(10);
+        Invoke("IrMenu", 5.0f);
     }
     public void IrMenu()
     {
         ubicacion = 0;
+        Botones.SetActive(true);
     }
 }
