@@ -532,7 +532,6 @@ GameObject:
   - component: {fileID: 556923823}
   - component: {fileID: 556923822}
   - component: {fileID: 556923821}
-  - component: {fileID: 556923824}
   m_Layer: 0
   m_Name: Casino
   m_TagString: Untagged
@@ -614,27 +613,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1737364056}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &556923824
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 556923820}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 44616753083fbf442bebf0bdcbdae170, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -990,7 +968,6 @@ GameObject:
   - component: {fileID: 1228392536}
   - component: {fileID: 1228392535}
   - component: {fileID: 1228392534}
-  - component: {fileID: 1228392537}
   m_Layer: 0
   m_Name: Oficina
   m_TagString: Untagged
@@ -1072,27 +1049,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1737364056}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1228392537
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1228392533}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c10bc49f3ed24654399391bc7c93f248, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1611199481
 GameObject:
   m_ObjectHideFlags: 0
@@ -1168,6 +1124,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1737364056}
+  - component: {fileID: 1737364057}
   m_Layer: 0
   m_Name: Camaras
   m_TagString: Untagged
@@ -1188,12 +1145,33 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 556923823}
   - {fileID: 1228392536}
+  - {fileID: 556923823}
   - {fileID: 334211936}
   - {fileID: 427818008}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1737364057
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1737364055}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a204eafe1eda65541b6ea6af71285a7b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1202180384368609172
 PrefabInstance:
   m_ObjectHideFlags: 0

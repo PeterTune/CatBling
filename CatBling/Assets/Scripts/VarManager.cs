@@ -17,7 +17,7 @@ public class VarManager : MonoBehaviour
     public bool haveFamilia = true;
     public bool haveTrabajo = true;
 
-    // 0 = trabajo; 1 = casino; 2 = familia; 3 = tienda; 4 = menú;
+    // 1 = trabajo; 2 = casino; 3 = familia; 4 = tienda; 0 = menú;
     public int ubicacion = 0; 
 
     // Start is called before the first frame update
