@@ -140,6 +140,7 @@ public class VarManager : MonoBehaviour
     //Funciones al apretar botones
     public void IrCasa()
     {
+        sumarEdad();
         ubicacion = 3;
         Vector2 nuevaPosicion = referenciaCasa.transform.position;
         transform.position = nuevaPosicion;
@@ -150,6 +151,7 @@ public class VarManager : MonoBehaviour
     }
     public void IrTrabajo()
     {
+        sumarEdad();
         ubicacion = 1;
         Vector2 nuevaPosicion = referenciaTrabajo.transform.position;
         transform.position = nuevaPosicion;
@@ -160,6 +162,7 @@ public class VarManager : MonoBehaviour
     }
     public void IrCasino()
     {
+        sumarEdad();
         ubicacion = 2;
         Vector2 nuevaPosicion = referenciaCasino.transform.position;
         transform.position = nuevaPosicion;
