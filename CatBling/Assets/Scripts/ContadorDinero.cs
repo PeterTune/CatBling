@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using System.Collections;
 
 public class CounterTMPro : MonoBehaviour
 {
@@ -10,8 +11,8 @@ public class CounterTMPro : MonoBehaviour
 
     void Start()
     {
+        Gato.dinero = counter;
         // Inicializa el texto con el valor del contador
-        UpdateCounterText();
         audioSource = GetComponent<AudioSource>();
     }
 
@@ -21,26 +22,21 @@ public class CounterTMPro : MonoBehaviour
         if (Input.anyKeyDown && Gato.ubicacion == 1)
         {
             // Incrementa el contador
-            counter++;
+            Gato.dinero++;
             // Actualiza el texto del contador
-            UpdateCounterText();
 
-            PlaySound();
+            StartCoroutine(PlaySound());
         }
     }
 
-    void UpdateCounterText()
-    {
-        // Actualiza el texto del componente de UI con el valor actual del contador
-        Gato.dinero = counter;
-    }
 
-    void PlaySound()
+    IEnumerator PlaySound()
     {
         // Reproduce el sonido asignado al AudioSource
         if (audioSource != null)
         {
             audioSource.Play();
         }
+        yield return null;
     }
 }

@@ -12,6 +12,11 @@ public class ClickDinero : MonoBehaviour
 
     public void OnClick()
     {
+        if(Gato.ubicacion != 2)
+        {
+            return;
+        }
+
         if (tipoClick == TipoClick.Mitad)
             valor = Gato.dinero / 2;
 

@@ -70,7 +70,7 @@ public class GamblingManager : MonoBehaviour
 
     public void Gambling()
     {
-        if(Gambleando == false)
+        if(Gambleando == false && Gato.ubicacion == 2)
             StartCoroutine(RotateForSeconds(rotationDuration));
     }
 
