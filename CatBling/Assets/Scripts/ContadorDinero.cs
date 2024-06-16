@@ -7,13 +7,12 @@ public class CounterTMPro : MonoBehaviour
     public TMP_Text counterText; // Referencia al componente de texto TextMesh Pro en la UI
     private int counter = 1000; // Variable para llevar el conteo
     public VarManager Gato;
-    private AudioSource audioSource; // Referencia al AudioSource
+    public GameObject coinSound;
+    private bool sonidoMoneda = false;
 
     void Start()
     {
         Gato.dinero = counter;
-        // Inicializa el texto con el valor del contador
-        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -25,18 +24,20 @@ public class CounterTMPro : MonoBehaviour
             Gato.dinero++;
             // Actualiza el texto del contador
 
-            StartCoroutine(PlaySound());
+            if(sonidoMoneda == false)
+            {
+                sonidoMoneda = true;
+                Instantiate(coinSound);
+                StartCoroutine(TimeCoin(0.1f));
+            }
+            
         }
     }
 
-
-    IEnumerator PlaySound()
+    IEnumerator TimeCoin (float t)
     {
-        // Reproduce el sonido asignado al AudioSource
-        if (audioSource != null)
-        {
-            audioSource.Play();
-        }
-        yield return null;
+        yield return new WaitForSeconds(t);
+        sonidoMoneda = false;
     }
+
 }

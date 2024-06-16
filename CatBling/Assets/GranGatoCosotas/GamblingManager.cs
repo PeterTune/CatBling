@@ -5,6 +5,10 @@ using TMPro;
 
 public class GamblingManager : MonoBehaviour
 {
+    private AudioSource audioSpin;
+    public AudioSource winningSound;
+    public AudioSource losingSound;
+
     public int Espacio1 = 0;
     public TextMeshProUGUI TextEspacio1;
     public int Espacio2 = 0;
@@ -25,6 +29,11 @@ public class GamblingManager : MonoBehaviour
     public bool Gambleando = false;
 
     public Casilla CasillaSeleccionada = Casilla.Ninguno;
+
+    private void Start()
+    {
+        audioSpin = GetComponent<AudioSource>();
+    }
 
     void Update()
     {
@@ -71,7 +80,12 @@ public class GamblingManager : MonoBehaviour
     public void Gambling()
     {
         if(Gambleando == false && Gato.ubicacion == 2)
+        {
+            Gato.restarTrabajo(5);
+            Gato.restarFamilia(5);
+            audioSpin.Play();
             StartCoroutine(RotateForSeconds(rotationDuration));
+        }
     }
 
     IEnumerator RotateForSeconds(float duration)
@@ -87,8 +101,8 @@ public class GamblingManager : MonoBehaviour
 
             yield return null;
         }
-
         SnapToClosestAngle();
+        audioSpin.Stop();
         Gambleando = false;
     }
 
@@ -152,6 +166,14 @@ public class GamblingManager : MonoBehaviour
     void SumarATotal() 
     {
         Gato.dinero += TotalGanadoRonda;
+        if (TotalGanadoRonda > 0)
+        {
+            winningSound.Play();
+        }
+        else
+        {
+            losingSound.Play();
+        }
     }
 }
 
