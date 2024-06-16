@@ -133,6 +133,11 @@ public class VarManager : MonoBehaviour
 
     public void sumarDinero(int valor)
     {
+        if (valor > 0 )
+        {
+            haveDinero = true;
+        }
+            
         dinero += valor;
     }
 
