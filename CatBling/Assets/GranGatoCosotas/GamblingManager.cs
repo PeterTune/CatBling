@@ -165,7 +165,7 @@ public class GamblingManager : MonoBehaviour
 
     void SumarATotal() 
     {
-        Gato.dinero += TotalGanadoRonda;
+        Gato.sumarDinero(TotalGanadoRonda);
         if (TotalGanadoRonda > 0)
         {
             winningSound.Play();

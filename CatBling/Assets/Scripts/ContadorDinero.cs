@@ -9,6 +9,7 @@ public class CounterTMPro : MonoBehaviour
     public VarManager Gato;
     public GameObject coinSound;
     private bool sonidoMoneda = false;
+    public GameObject Yen;
 
     void Start()
     {
@@ -28,6 +29,7 @@ public class CounterTMPro : MonoBehaviour
             {
                 sonidoMoneda = true;
                 Instantiate(coinSound);
+                Instantiate(Yen);
                 StartCoroutine(TimeCoin(0.1f));
             }
             

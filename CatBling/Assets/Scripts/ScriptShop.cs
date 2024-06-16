@@ -4,6 +4,7 @@ using System.Drawing;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ScriptShop : MonoBehaviour
 {
@@ -50,7 +51,7 @@ public class ScriptShop : MonoBehaviour
                     if (scriptA.dinero >= PrecioObjA)
                     {
                         scriptA.restarDinero(PrecioObjA);
-                        scriptA.sumarTrabajo(20);
+                        scriptA.sumarTrabajo(5);
                         PrecioObjA += PrecioObjA;
                     } else
                     {
@@ -62,7 +63,7 @@ public class ScriptShop : MonoBehaviour
                     if (scriptA.dinero >= PrecioObjB)
                     {
                         scriptA.restarDinero(PrecioObjB);
-                        scriptA.sumarFamilia(20);
+                        scriptA.sumarFamilia(5);
                         PrecioObjB += PrecioObjB;
                     }
                     else
@@ -74,7 +75,7 @@ public class ScriptShop : MonoBehaviour
                     if (scriptA.dinero >= PrecioObjC)
                     {
                         scriptA.restarDinero(PrecioObjC);
-                        scriptA.sumarFelicidad(20);
+                        scriptA.sumarFelicidad(5);
                         PrecioObjC += PrecioObjC;
                     }
                     else
@@ -86,7 +87,7 @@ public class ScriptShop : MonoBehaviour
                     if(scriptA.dinero >= PrecioObjD)
                     {
                         scriptA.restarDinero(PrecioObjD);
-                        
+                        SceneManager.LoadScene("GoodEnding");
                     } 
                     else
                     {

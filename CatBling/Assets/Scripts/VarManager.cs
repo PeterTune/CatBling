@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class VarManager : MonoBehaviour
 {
@@ -53,6 +54,31 @@ public class VarManager : MonoBehaviour
         TMPtrabajo.SetText("Trabajo: " + trabajo.ToString());
         TMPfamilia.SetText("Familia: " + familia.ToString());
         TMPinero.SetText("Dinero: $" + dinero.ToString());
+
+        if (ubicacion == 0)
+        {
+            if(!haveFelicidad)
+            {
+                SceneManager.LoadScene("SinFelicidad");
+            }
+
+            if(!haveDinero)
+            {
+                SceneManager.LoadScene("SinDinero");
+            }
+
+            if(!haveFamilia)
+            {
+                SceneManager.LoadScene("SinFamilia");
+            }
+
+            if(!haveTrabajo && haveFamilia)
+            {
+                SceneManager.LoadScene("SinTrabajo");
+            }
+
+
+        }
     }
 
     public void restarEdad(int valor)

@@ -14,4 +14,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Oficina.unity
     guid: 8dd90c3b3c84d10499bf61ea915658bc
+  - enabled: 1
+    path: Assets/Scenes/SinDinero.unity
+    guid: 26b5d1a68e11ee74c8d64e5f58341b6c
+  - enabled: 1
+    path: Assets/Scenes/SinFamilia.unity
+    guid: b19daa23765754c408ef4b597ea1aa9d
+  - enabled: 1
+    path: Assets/Scenes/SinFelicidad.unity
+    guid: 7b6d8da496b3b9e46b25900040ed891a
+  - enabled: 1
+    path: Assets/Scenes/SinTrabajo.unity
+    guid: 8712351251c2fe04f82904ea3697cec3
+  - enabled: 1
+    path: Assets/Scenes/GoodEnding.unity
+    guid: bbea686e1de3b6d42a8e80c44e43cd7c
   m_configObjects: {}

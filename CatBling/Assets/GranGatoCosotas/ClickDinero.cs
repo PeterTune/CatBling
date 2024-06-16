@@ -28,7 +28,7 @@ public class ClickDinero : MonoBehaviour
         CasillaElegida = GamblingManager.CasillaSeleccionada;
         if (Gato.dinero >= valor && CasillaElegida != Casilla.Ninguno)
         {
-            Gato.dinero -= valor;
+            Gato.restarDinero(valor);
             GamblingManager.SumarEspacio(CasillaElegida, valor);
         }
     }
