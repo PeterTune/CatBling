@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Oficina.unity
     guid: 8dd90c3b3c84d10499bf61ea915658bc
+  - enabled: 1
+    path: Assets/Scenes/Intro.unity
+    guid: 41c1a9e64c3f90e47b24bb6808842507
   m_configObjects: {}
